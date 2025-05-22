@@ -1,0 +1,86 @@
+---
+author: Carlos Anríquez
+title: Sociólogo 
+format:
+  classic-cv-pdf: default
+cvfooter:
+  left: "pagina.net"
+  right: "github.com/carlosAnriquez"
+cvcolor: 58748F #without `#`
+cvfont: raleway #texlive fonts like raleway,fetamont,gillius,comfortaa
+cvmeta:
+  - title: Cargo actual
+    left: Asistente de investigación Programa Libertad de Expresión y comunicaciones
+    right: Universidad de Chile
+  - title: Aptitudes
+    left: R, Python, estadística, teoría social, metodologías de investigación, inglés avanzado
+    right: carlos.anriquez@ug.uchile.cl
+execute:
+  echo: false
+---
+
+```{r}
+#| label: cvevents
+cvevents <- function(tbl, when, what, where, details) {
+
+    command_start <- "\\cvevent"
+
+    res <- paste0(
+        command_start, "{", tbl[[when]], "}", 
+        "{", tbl[[what]], "}",
+        "{", tbl[[where]], "}")
+    
+    tbl[[details]] <- sapply(tbl[[details]], function(x) paste0("{", x, "}", collapse = ","))
+    res <- paste0(res, "{",tbl[[details]],"}")
+
+    cat(res, sep = "\n")
+}
+```
+
+# Perfil
+
+Sociólogo por la Universidad de Chile, con trayectoria de investigación aplicada en las áreas de: políticas educativas, libertad de expresión en redes sociales y relación entre autoridad y ciudadanía. Mi experiencia principal está en el diseño, implementación y análisis de estudios empíricos, a través del manejo avanzado de metodologías cuantitativas y cualitativas, análisis estadístico multivariado, programación en R y Python, así como generación de documentos reproducibles con Quarto. Dominio de inglés avanzado y formación complementaria en análisis de datos para ciencias sociales.
+
+# Experiencia
+
+```{r}
+#| label: experience
+#| output: asis
+tibble::tribble(
+    ~role, ~institution, ~dates, ~details, ~tasks,
+    "Asistente de investigación", "Facultad de Comunicación e Imagen - Universidad de Chile", "Oct 2024 - Actualidad","detalle", c("Proyecto de investigación: Exploración de la Valoración de la Libertad de Expresión y el Derecho a la Comunicación en redes sociales en Chile.", "Recopilar y analizar interacciones entre medios de comunicación y usuarios con métodos estadísticos avanzados: algoritmos de clasificación y técnicas de reducción de dimensiones."),
+    "Tesista ", " Fondecyt: Entre la obediencia y la resistencia: cómo se relaciona la ciudadanía con las policías en Chile?", "Oct 2023 - Oct 2024","detalle", c("Proyecto de investigación: el rol del miedo y la orientación política en la justificación de la violencia en contexto de protesta social.", "Analizar bibliografía, aplicar estadística descriptiva y multivariada, programación en R Studio y creación de documentos reproducibles con Quarto."),
+    "Encuestador", "Dirección de Estudios Sociales - Universidad Católica", "Ago 2022 – oct 2023","detalle",  c("Aplicar diversos instrumentos cuantitativos de investigación social: encuestas de opinión política, satisfacción de uso y estudios de mercado.", "Capacitación a encuestadores en la aplicación de instrumentos cuantitativos de recolección de información por teléfono."),
+    "Práctica Profesional", "División de Educación General - Ministerio de Educación ", "Dic 2020 - Mar 2021", "detalle", c("Analizar y gestionar políticas públicas en el Ministerio de Educación, buscando un uso eficiente de los recursos disponibles a partir de la información recopilada.", "Explorar y analizar bases de datos de alta complejidad."),
+    "Ayudante de curso políticas públicas", "Universidad de Chile", "Mar 2019 - Dic 2019","detalle",  c("Organizar material bibliográfico, guiar discusiones grupales y ejercicios de resolución de problemas centrados en el análisis aplicado de políticas públicas.")
+) |>
+    cvevents(when = "dates", what = "role", where = "institution", details = "tasks")
+```
+
+# Educación
+
+```{r }
+#| label: education
+#| output: asis
+tibble::tribble(
+    ~degree, ~uni, ~loc, ~dates, ~details,
+    "Sociologo", "Universidad de Chile", "Santiago, Chile", "2015 - 2021", c("Tesis: el rol del miedo y la orientación política en la justificación de la violencia en contexto de protesta", "uso de técnicas estadísticas para probar modelos teóricos de psicología social"),
+    "Python avanzado", "Academia desafío LATAM", "Santiago, Chile", "2021 - 2022", c("uso de python para análisis de datos e inteligencia artificial")
+) |>
+  dplyr::mutate(
+
+        # Creamos una nueva columna llamada 'degree_uni'
+
+        # que combina 'degree' y 'uni' separados por una coma y un espacio.
+
+        # Puedes cambiar el separador (", ") a tu gusto, por ejemplo " - " o " ("... ")"
+
+        degree_uni = paste0(degree, ", ", uni)
+
+        # Si tienes la librería `glue` instalada, también podrías usar:
+
+        # degree_uni = glue::glue("{degree}, {uni}")
+
+    ) |>
+    cvevents(when = "dates", what = "degree_uni", where = "loc", details = "details")
+```
