@@ -10,7 +10,7 @@ cvcolor: 58748F #without `#`
 cvfont: raleway #texlive fonts like raleway,fetamont,gillius,comfortaa
 cvmeta:
   - title: Cargo actual
-    left: Asistente de investigación Programa Libertad de Expresión y comunicaciones
+    left: Asistente de investigación cuantitativo fondecyt 11241304
     right: Universidad de Chile
   - title: Aptitudes
     left: R, Python, estadística, teoría social, metodologías de investigación, inglés avanzado
@@ -48,6 +48,7 @@ Sociólogo por la Universidad de Chile, con trayectoria de investigación aplica
 #| output: asis
 tibble::tribble(
     ~role, ~institution, ~dates, ~details, ~tasks,
+    "Asistente de investigación cuantitativo", "Fondecyt 11241304", "junio 2025 - Actualidad","detalle", c("Proyecto de investigación: Re-conociendo las desigualdades en la academia chilena: Un análisis con perspectiva de género interseccional a las trayectorias de personas con doctorado en STEM", "Uso de Análisis de Clases Latentes y modelos Multinivel."),
     "Asistente de investigación", "Facultad de Comunicación e Imagen - Universidad de Chile", "Oct 2024 - Actualidad","detalle", c("Proyecto de investigación: Exploración de la Valoración de la Libertad de Expresión y el Derecho a la Comunicación en redes sociales en Chile.", "Recopilar y analizar interacciones entre medios de comunicación y usuarios con métodos estadísticos avanzados: algoritmos de clasificación y técnicas de reducción de dimensiones."),
     "Tesista ", " Fondecyt: Entre la obediencia y la resistencia: cómo se relaciona la ciudadanía con las policías en Chile?", "Oct 2023 - Oct 2024","detalle", c("Proyecto de investigación: el rol del miedo y la orientación política en la justificación de la violencia en contexto de protesta social.", "Analizar bibliografía, aplicar estadística descriptiva y multivariada, programación en R Studio y creación de documentos reproducibles con Quarto."),
     "Encuestador", "Dirección de Estudios Sociales - Universidad Católica", "Ago 2022 – oct 2023","detalle",  c("Aplicar diversos instrumentos cuantitativos de investigación social: encuestas de opinión política, satisfacción de uso y estudios de mercado.", "Capacitación a encuestadores en la aplicación de instrumentos cuantitativos de recolección de información por teléfono."),
