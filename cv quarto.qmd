@@ -4,20 +4,20 @@ title: Sociólogo
 format:
   classic-cv-pdf: default
 cvfooter:
+  left: ""
   right: "github.com/carlosAnriquez"
-cvcolor: 58748F #without `#`
-cvfont: raleway #texlive fonts like raleway,fetamont,gillius,comfortaa
+cvcolor: 58748F
 cvmeta:
-  - title: Cargo actual
-    left: Asistente de investigación cuantitativo fondecyt 11241304.
-    right: 
+  - title: Contacto
+    left: carlos.anriquez@ug.uchile.cl 
+    right: ""
   - title: Aptitudes
     left: Estadística, investigación social cuantitativa, R, Python, gestión de datos, teoría social, visualización de datos, inglés avanzado.
-    right: carlos.anriquez@ug.uchile.cl - github.com/carlosAnriquez
+    right: ""
+
 execute:
   echo: false
 ---
-
 ```{r}
 #| label: cvevents
 cvevents <- function(tbl, when, what, where, details) {
@@ -48,7 +48,7 @@ Mi experiencia principal está en transformar datos complejos en insights signif
 #| output: asis
 tibble::tribble(
     ~role, ~institution, ~dates, ~details, ~tasks,
-    "Pasantía de investigación", "Programa de las Naciones Unidas Para el Desarrollo", "Sep 2025 - Actualidad","detalle", c("Proyecto de investigación: el miedo al crímen en Chile.", "Procesamiento y limpieza Encuesta Nacional de Seguridad (ENUSC).",
+    "Pasantía de investigación", "Programa de las Naciones Unidas Para el Desarrollo", "Sep 2025 - Ene 2026","detalle", c("Proyecto de investigación: el miedo al crímen en Chile.", "Procesamiento y limpieza Encuesta Nacional de Seguridad (ENUSC).",
 "Análisis descriptivo y visualizaciones usando ponderadores estadísticos.", "Uso de regresiones multinivel para describir efectos a nivel de comuna, barrio e individual.", "Análisis de bibliografía y escritura académica."),
     "Asistente de investigación cuantitativo", "Fondecyt 11241304", "Jun 2025 - Actualidad","detalle", c("Proyecto de investigación: Re-conociendo las desigualdades en la academia chilena: Un análisis con perspectiva de género interseccional a las trayectorias de personas con doctorado en STEM", "Procesamiento y limpieza de datos.",
 "Desarrollo de análisis estadísticos multivariados: ecuaciones estructurales, análisis de clases latentes y regresiones multinivel."),

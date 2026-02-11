@@ -31,9 +31,8 @@
 
 
 %----------------------------------------------------------------------------------------
-%	ENCODING
+%	ENCODING - No usar inputenc con XeLaTeX
 %----------------------------------------------------------------------------------------
-\usepackage[utf8]{inputenc}		
 
 %----------------------------------------------------------------------------------------
 %	LOGIC
@@ -41,15 +40,14 @@
 \usepackage{xifthen}
 
 %----------------------------------------------------------------------------------------
-%	FONT
+%	FONT - Configuración para XeLaTeX con Latin Modern
 %----------------------------------------------------------------------------------------
 
-% some tex-live fonts - choose your own
-\usepackage{$cvfont$}
+% Computer Modern es la fuente por defecto en LaTeX
+% No necesitamos fontspec si queremos usar CM estándar
 
-% set font default
+% set font default to sans serif
 \renewcommand*\familydefault{\sfdefault} 	
-\usepackage[T1]{fontenc}
 
 % more font size definitions
 \usepackage{moresize}		
@@ -151,7 +149,7 @@
 %
 \newcommand{\metasection}[2]
 {
-\footnotesize{#2} \hspace*{\fill} \footnotesize{#1}\\[1pt]
+\normalsize{#2} \hspace*{\fill} \normalsize{#1}\\[1pt]
 }
 
 %----------------------------------------------------------------------------------------
@@ -203,7 +201,7 @@
 %----------------------------------------------------------------------------------------
 \vspace{-8pt}
 \begin{center}
-	\HUGE \textsc{$author$} \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \textsc{Resume}\\[2pt]
+	\HUGE $author$ \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} CV\\[2pt]
 	\small $title$
 \end{center}
 
