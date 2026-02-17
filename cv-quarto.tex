@@ -98,7 +98,7 @@
 \usepackage{color}
 
 %accent color
-\definecolor{sectcol}{HTML}{$cvcolor$}
+\definecolor{sectcol}{HTML}{58748F}
 
 %dark background color
 \definecolor{bgcol}{RGB}{110,110,110}
@@ -192,12 +192,6 @@
 %----------------------------------------- -----------------------------------------------
 \newcommand{\mystrut}{\rule[-.3\baselineskip]{0pt}{\baselineskip}}
 
-%----------------------------------------------------------------------------------------
-% TIGHTLIST for Pandoc lists
-%----------------------------------------------------------------------------------------
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-
 \begin{document}
 
 \pagestyle{fancy}
@@ -207,8 +201,8 @@
 %----------------------------------------------------------------------------------------
 \vspace{-8pt}
 \begin{center}
-	\HUGE $author$\\[6pt]
-	\Large $title$
+	\HUGE Carlos Anríquez\\[6pt]
+	\Large Sociólogo
 \end{center}
 
 \vspace{6pt}
@@ -216,9 +210,10 @@
 %---------------------------------------------------------------------------------------
 %	META SECTION
 %----------------------------------------------------------------------------------------
-$for(cvmeta)$
-\metasection{$cvmeta.right$}{\textbf{$cvmeta.title$}: $cvmeta.left$}
-$endfor$
+\metasection{}{\textbf{Contacto}: carlos.anriquez@ug.uchile.cl}
+\metasection{}{\textbf{Aptitudes}: Estadística, investigación social
+cuantitativa, R, Python, gestión de datos, teoría social, visualización
+de datos, inglés avanzado.}
 
 \vspace{-2pt}
 \textcolor{softcol}{\hrule}
@@ -227,7 +222,32 @@ $endfor$
 \normalsize
 
 \vspace{-6pt}
-$body$
+\cvsection{Perfil}
+
+Sociólogo por la Universidad de Chile, con trayectoria en ciencias
+sociales cuantitativas e investigación aplicada. Mi experiencia
+principal está en transformar datos complejos en insights
+significativos, mediante visualizaciones atractivas y modelos
+estadísticos que permitan responder preguntas complejas. Trabajo con R y
+Python siguiendo principios de ciencia abierta y flujos reproducibles,
+documentando análisis y resultados en Quarto para garantizar
+transparencia y replicabilidad. Cuento además con dominio avanzado de
+inglés y formaciones complementarias en análisis de datos.
+
+\cvsection{Experiencia}
+
+\cvevent{Sep 2025 - Ene 2026}{Pasantía de investigación}{Programa de las Naciones Unidas Para el Desarrollo}{{Proyecto de investigación: el miedo al crímen en Chile.},{Procesamiento y limpieza Encuesta Nacional de Seguridad (ENUSC).},{Análisis descriptivo y visualizaciones usando ponderadores estadísticos.},{Uso de regresiones multinivel para describir efectos a nivel de comuna, barrio e individual.},{Análisis de bibliografía y escritura académica.}}
+\cvevent{Jun 2025 - Actualidad}{Asistente de investigación cuantitativo}{Fondecyt 11241304}{{Proyecto de investigación: Re-conociendo las desigualdades en la academia chilena: Un análisis con perspectiva de género interseccional a las trayectorias de personas con doctorado en STEM},{Procesamiento y limpieza de datos.},{Desarrollo de análisis estadísticos multivariados: ecuaciones estructurales, análisis de clases latentes y regresiones multinivel.}}
+\cvevent{Oct 2024 - Actualidad}{Asistente de investigación}{Facultad de Comunicación e Imagen - Universidad de Chile}{{Proyecto de investigación: Monitoreo de desórdenes informativos en las elecciones presidenciales chilenas 2025.},{Recopilar y analizar interacciones entre medios de comunicación y usuarios con métodos mixtos: análisis temático, algoritmos de clasificación y técnicas de reducción de dimensiones.}}
+\cvevent{Oct 2023 - Oct 2024}{Tesista }{ Fondecyt: Entre la obediencia y la resistencia: cómo se relaciona la ciudadanía con las policías en Chile?}{{Proyecto de investigación: el rol del miedo y la orientación política en la justificación de la violencia en contexto de protesta social.},{Analizar bibliografía, aplicar estadística descriptiva y multivariada, programación en R Studio y creación de documentos reproducibles con Quarto.}}
+\cvevent{Ago 2022 – Oct 2023}{Encuestador}{Dirección de Estudios Sociales - Universidad Católica}{{Aplicar diversos instrumentos cuantitativos de investigación social: encuestas de opinión política, satisfacción de uso y estudios de mercado.},{Capacitación a encuestadores en la aplicación de instrumentos cuantitativos de recolección de información por teléfono.}}
+\cvevent{Dic 2020 - Mar 2021}{Práctica Profesional}{División de Educación General - Ministerio de Educación }{{Analizar y gestionar políticas públicas en el Ministerio de Educación, buscando un uso eficiente de los recursos disponibles a partir de la información recopilada.},{Explorar y analizar bases de datos de alta complejidad.},{Base de datos Plan de Mejoramiento Escolar (PME). Cuerpo de texto con los objetivos de mejoramiento escolar de cerca de 3000 establecimientos.},{Base de datos Sistema de Alerta Temprana de Deserción Escolar. Registro nacional del 10\% de estudiantes con mayor probabilidad de deserción.}}
+\cvevent{Mar 2019 - Dic 2019}{Ayudante de curso políticas públicas}{Universidad de Chile}{{Organizar material bibliográfico, guiar discusiones grupales y ejercicios de resolución de problemas centrados en el análisis de políticas públicas.}}
+
+\cvsection{Educación}
+
+\cvevent{}{Sociologo, Universidad de Chile}{Santiago, Chile}{{Tesis: el rol del miedo y la orientación política en la justificación de la violencia en contexto de protesta},{Uso de modelos estadísticos para probar modelos teóricos de psicología social}}
+\cvevent{}{Python avanzado, Academia desafío LATAM}{Santiago, Chile}{{Uso de python para análisis de datos e inteligencia artificial}}
 
 %--------------------------------------------------------------------------------------------------
 %	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth) 
@@ -235,6 +255,6 @@ $body$
 
 \null
 \vspace*{\fill}
-\hspace{-0.25\linewidth}\colorbox{white}{\makebox[1.5\linewidth][c]{\mystrut  \textnormal{\textcolor{sectcol}{$cvfooter.left$}  *  \textcolor{sectcol}{$cvfooter.right$}}}}
+\hspace{-0.25\linewidth}\colorbox{white}{\makebox[1.5\linewidth][c]{\mystrut  \textnormal{\textcolor{sectcol}{}  *  \textcolor{sectcol}{github.com/carlosAnriquez}}}}
 
 \end{document}
