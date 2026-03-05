@@ -50,7 +50,8 @@
 \renewcommand*\familydefault{\sfdefault} 	
 
 % more font size definitions
-\usepackage{moresize}		
+\usepackage{moresize}
+\usepackage{fontawesome5}
 
 
 %----------------------------------------------------------------------------------------
@@ -207,28 +208,21 @@
 %----------------------------------------------------------------------------------------
 \vspace{-8pt}
 \begin{center}
-	\HUGE $author$\\[6pt]
-	\Large $title$
+	\huge $author$\\[6pt]
+	\LARGE $title$\\[6pt]
 \end{center}
-
-\vspace{6pt}
-
 %---------------------------------------------------------------------------------------
 %	META SECTION
 %----------------------------------------------------------------------------------------
-$for(cvmeta)$
-\metasection{$cvmeta.right$}{\textbf{$cvmeta.title$}: $cvmeta.left$}
-$endfor$
-
+\begin{center}
+\large $for(cvmeta)$$cvmeta.left$$sep$ \quad $endfor$
+\end{center}
 \vspace{-2pt}
 \textcolor{softcol}{\hrule}
 \vspace{6pt}
-
 \normalsize
-
 \vspace{-6pt}
 $body$
-
 %--------------------------------------------------------------------------------------------------
 %	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth) 
 %--------------------------------------------------------------------------------------------------
